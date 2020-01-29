@@ -1,5 +1,4 @@
 window.onload = () => {
-  
   var xhr = new XMLHttpRequest(),
     method = "GET",
     url = "http://127.0.0.1:3000/prefectures/";
@@ -43,10 +42,18 @@ window.getCities = () => {
 }
 
 window.createFishingLog = () => {
-  var started_at = document.getElementById("started_at").value;
-  var finished_at = document.getElementById("finished_at").value;
-
-  var data = { started_date: started_at, finished_date: finished_at };
+  var started_date = document.getElementById("started_date").value;
+  var finished_date = document.getElementById("finished_date").value;
+  var started_time = document.getElementById("started_time").value;
+  var finished_time = document.getElementById("finished_time").value;
+  
+  var data = {
+    started_date: started_date,
+    finished_date: finished_date,
+    started_time: started_time,
+    finished_time: finished_time,
+  };
+  data = JSON.stringify(data);
 
   var xhr = new XMLHttpRequest(),
     method = "POST",
@@ -57,8 +64,8 @@ window.createFishingLog = () => {
       if(xhr.readyState === 4 && xhr.status === 200) {
         var result = JSON.parse(xhr.responseText).data;
         console.log(result);
+        window.location.href = "index.html";
       } 
     };
-  console.log(String(data));
-  xhr.send(data.to_s);
+  xhr.send(data);
 }
