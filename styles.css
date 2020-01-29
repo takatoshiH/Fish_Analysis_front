@@ -1,0 +1,106 @@
+body {
+  height:100vw;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 5% auto;
+}
+
+td {
+  border: solid 1px gray;
+  padding: 0.5em;
+}
+
+#detail {
+  width:100%;
+  height: 10vw;
+}
+
+#menu {
+  background-color: gainsboro;
+  width:12.5%;
+  height: 100%;
+  float: left;
+  padding-top: 10px;
+}
+
+.menu_content {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.log_information {
+  float: left; 
+  width: 25%; 
+  text-align: center;
+}
+
+.log_title {
+  color: gray;
+}
+
+#main {
+  width:87.5%;
+  float: left;
+}
+
+#title {
+  width:100%; 
+  text-align: center;
+}
+
+#tide_chart {
+  width: 90%; 
+  height: 50%;
+  background-color: beige; 
+  margin: 0 auto; 
+  padding: 5px;
+}
+
+#catches {
+  width: 30%; 
+  text-align: center; 
+  height: 20vw; 
+  float: left; 
+  margin-right: 3%;
+  overflow: scroll;
+}
+
+#catch {
+  background-color: gainsboro; 
+  height: 20%; 
+  width: 90%; 
+  margin: 5px auto;
+}
+
+#tackle{
+  background-color: gainsboro; 
+  height: 20%; 
+  width: 90%; 
+  margin: 5px auto;
+}
+
+
+#tackles {
+  width: 30%; 
+  text-align: center; 
+  height: 20vw; 
+  float: left; 
+  margin-right: 3%;
+  overflow: scroll;
+}
+
+#railfall {
+  width: 30%; 
+  text-align: center; 
+  height: 20vw; 
+  float: left;
+}
+
+.c3-region.range {
+  fill: green;
+}

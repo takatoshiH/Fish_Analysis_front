@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fishing Analysis</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+  <body>
+      <div id="menu">
+          <div class="menu_content">HOME</div>
+          <div class="menu_content">LOG</div>
+          <div class="menu_content">ANALYSIS</div>
+      </div>
+      <div id="main">
+        <div id="title">
+          <h1>釣行データの登録</h1>
+        </div>
+        <div id="input_area">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h1 style="color:gray">開始時間</h1>
+            <input type="date" id="started_at">
+          </div>
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h1 style="color:gray">終了時間</h1>
+            <input type="date" id="finished_at">
+          </div>
+          <div style="text-align: center; margin-bottom: 30px;">
+              <h1 style="color:gray">フィールド</h1>
+            <select id="prefecture" onchange="getCities();"></select>
+            <select id="city">
+            </select>
+            <div style="margin-top: 10px;">
+              <div>フィールド名</div>
+              <input>
+            </div>
+          </div>
+          <!-- <div style="text-align: center; margin-bottom: 30px;">
+            <h1 style="color:gray;">キャッチ</h1>
+            <div>
+              <input type="number">
+            </div>
+            <select id="species">
+              <option value="スズキ">スズキ</option>
+              <option value="ヒラスズキ">ヒラスズキ</option>
+              <option value="タイリクスズキ">タイリクスズキ</option>
+            </select>
+            <input type="range" min="0" max="150">
+          </div> -->
+          <div style="text-align: center; margin-bottom: 30px;">
+            <button onclick="createFishingLog();">登録</button>
+          </div>
+        </div>
+      </div>
+      <script src="./main.js"></script>
+  </body>
+</html>
